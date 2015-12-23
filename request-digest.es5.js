@@ -73,7 +73,8 @@ var HTTPDigest = (function () {
         uri: options.path,
         qop: challenge.qop,
         opaque: challenge.opaque,
-        response: response.digest('hex')
+        response: response.digest('hex'),
+        algorithm: 'MD5'
       };
 
       authParams = this._omitNull(authParams);
